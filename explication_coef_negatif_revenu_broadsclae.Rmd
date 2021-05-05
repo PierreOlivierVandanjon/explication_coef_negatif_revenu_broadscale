@@ -5,35 +5,30 @@ output: html_notebook
 
 interprétation corrélation négative sur le broad scale alors qu'elle est positive sur le medium scale.
 
-=> 
+
 exemple d'explication du changement de signe de la richesse entre le modèle purement socioeco et le broad scale
 
-modèle purement socioéconomique 
+modèle purement socioéconomique
 taux de possession de véhicule
-95 % = 0.5 de densité et    10 000 euros de revenu médian : bord de mer
-90 % = 0.5 de densité  et    8 000 euros de revenu médian : classe moyenne
-85 % = 0.5 de densité  et    6 000 euros de revenu médian : Gilet Jaune
+100 % = 0.05  de densité et  15 000 euros de revenu médian : bord de mer
+95 % = 0.2 de densité  et    8 000 euros de revenu médian : classe moyenne
+90 % = 0.4 de densité  et    2 000 euros de revenu médian : Gilet Jaune
 
-87 % = 1.2 de densité et  10 000 euros de revenu médian  : centre ville
-86 % = 1   de densité et    7 000 euros de revenu médian : proche centre
-85 %  = 0.8 de densité et   4 000 euros de revenu médian : quartier
+35 % = 3 de densité et  30 000 euros de revenu médian  : centre ville
+30 % =  3  de densité et    15 000 euros de revenu médian : proche centre
+10 %  = 3.5 de densité et   1 000 euros de revenu médian : quartier
 
 = effet positif de la richesse au niveau global
 
 
-broad scale 
+broad scale idem mais avec des taux de possession harmonisée
 
-91 % = 0.5 de densité et 10 000 euros de revenu médian
-90 % = 0.5 de densité  et    8 000 euros de revenu médian
-89 % = 0.5 de densité  et 6 000 euros de revenu médian
-
-86.5 % = 1.2 de densité et  10 000 euros de revenu médian
-86 % = 1   de densité et    7 000 euros de revenu médian
-85.5 %  = 0.8 de densité et 4 000 euros de revenu médian
+95 % sur le rural
+25 % en ville = moyenne de 35, 30 et 10
 
 = effet négatif de la richesse qui doit " rattraper l'effet densité en ville "
 
-La longueur d'onde importante de la densité, et peu importante de la revenu médian.
+conclusion : La longueur d'onde importante de la densité, et peu importante de la revenu médian.
 
 
 ```{r}
@@ -48,9 +43,3 @@ print(summary(regcomplet))
 regbroadscale<-lm(broadscale ~densite+ revenu , data=donnees_spatiales)
 print(summary(regbroadscale))
 ```
-
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
-
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
-
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
